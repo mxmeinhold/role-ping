@@ -1,0 +1,10 @@
+language: node_js
+services:
+  - "docker"
+
+script:
+    - "npx eslint main.js"
+    - "docker build -t impeach ."
+
+notifications:
+    email: false
