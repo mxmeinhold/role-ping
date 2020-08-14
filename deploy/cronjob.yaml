@@ -1,0 +1,21 @@
+apiVersion: batch/v1beta1
+kind: CronJob
+metadata:
+  name: "role-ping"
+  namespace: "role-ping"
+spec:
+  schedule: "00 14 * * *"
+  jobTemplate:
+    spec:
+      template:
+        metadata:
+          labels:
+            parent: "cronjob-role-ping"
+        spec:
+          containers:
+            - name: "role-ping"
+              image: "role-ping"
+              env:
+                - name: "TOKEN"
+                  value: "< INSERT TOKEN HERE >"
+          restartPolicy: "OnFailure"

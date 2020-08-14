@@ -1,0 +1,21 @@
+apiVersion: build.openshift.io/v1
+kind: BuildConfig
+metadata:
+  labels:
+    build: role-ping
+  name: role-ping
+  namespace: role-ping
+spec:
+  successfulBuildsHistoryLimit: 3
+  failedBuildsHistoryLimit: 3
+  source:
+    git:
+      uri: "https://github.com/mxmeinhold/role-ping.git"
+  output:
+    to:
+      kind: ImageStreamTag
+      name: role-ping:latest
+  runPolicy: Serial
+  strategy:
+    dockerStrategy: {}
+    type: Docker

@@ -1,0 +1,20 @@
+{
+  "name": "role-ping",
+  "main": "main.js",
+  "repository": "https://github.com/mxmeinhold/role-ping",
+  "author": "Max Meinhold <mxmeinhold@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "start": "node main.js"
+  },
+  "dependencies": {
+    "discord.js": "^12.2.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.2.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "prettier": "^2.0.5"
+  }
+}
