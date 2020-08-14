@@ -46,4 +46,4 @@ COPY . /opt/role-ping
 USER 1001
 
 # Sleep a random interval between 0 and 8 hours
-CMD ["sleep", "$[ ( $RANDOM % 28800 ) ]s", "node", "main.js"]
+CMD sleep $[ ( $RANDOM % 28800 ) ]s; node main.js
