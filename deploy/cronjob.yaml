@@ -5,6 +5,7 @@ metadata:
   namespace: "role-ping"
 spec:
   schedule: "00 14 * * *"
+  startingDeadlineSeconds: 120
   jobTemplate:
     spec:
       template:
@@ -18,4 +19,4 @@ spec:
               env:
                 - name: "TOKEN"
                   value: "< INSERT TOKEN HERE >"
-          restartPolicy: "OnFailure"
+          restartPolicy: "Never"
